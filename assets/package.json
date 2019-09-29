@@ -1,0 +1,21 @@
+{
+  "repository": {},
+  "license": "MIT",
+  "scripts": {
+    "deploy": "cp -R static/* ../priv/static/ && parcel build js/app.js --out-dir ../priv/static/js --public-url /js --no-cache",
+    "watch": "cp -R static/* ../priv/static/ && parcel watch js/app.js --out-dir ../priv/static/js --public-url /js"
+  },
+  "dependencies": {
+    "phoenix": "file:../deps/phoenix",
+    "phoenix_html": "file:../deps/phoenix_html"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "babel-loader": "^8.0.0",
+    "css-loader": "^2.1.1",
+    "mini-css-extract-plugin": "^0.4.0",
+    "parcel": "^1.12.3",
+    "parcel-plugin-stdin": "^0.1.1"
+  }
+}
