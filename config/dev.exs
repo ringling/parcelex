@@ -52,7 +52,7 @@ config :parcelex, ParcelexWeb.Endpoint,
 config :parcelex, ParcelexWeb.Endpoint,
   live_reload: [
     patterns: [
-      ~r"priv/static/.*(js|css|png|jpeg|jpg|gif|svg)$",
+      ~r"priv/static/.*(js|css|scss|png|jpeg|jpg|gif|svg)$",
       ~r"priv/gettext/.*(po)$",
       ~r"lib/parcelex_web/{live,views}/.*(ex)$",
       ~r"lib/parcelex_web/templates/.*(eex)$"
