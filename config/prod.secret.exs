@@ -5,11 +5,11 @@
 use Mix.Config
 
 database_url =
-  System.get_env("DATABASE_URL") ||
-    raise """
-    environment variable DATABASE_URL is missing.
-    For example: ecto://USER:PASS@HOST/DATABASE
-    """
+  System.get_env("DATABASE_URL") || "ecto://elixir:elixir@127.0.0.1/parcelex_dev"
+    # raise """
+    # environment variable DATABASE_URL is missing.
+    # For example: ecto://USER:PASS@HOST/DATABASE
+    # """
 
 config :parcelex, Parcelex.Repo,
   # ssl: true,
@@ -17,11 +17,11 @@ config :parcelex, Parcelex.Repo,
   pool_size: String.to_integer(System.get_env("POOL_SIZE") || "10")
 
 secret_key_base =
-  System.get_env("SECRET_KEY_BASE") ||
-    raise """
-    environment variable SECRET_KEY_BASE is missing.
-    You can generate one by calling: mix phx.gen.secret
-    """
+  System.get_env("SECRET_KEY_BASE") || "A4jRAk2a2kwxodBj4HNSo3yYi1HFJ47TVr3iLSY9/LMu+9TiCEe1stvjYHcUobPL"
+    # raise """
+    # environment variable SECRET_KEY_BASE is missing.
+    # You can generate one by calling: mix phx.gen.secret
+    # """
 
 config :parcelex, ParcelexWeb.Endpoint,
   http: [:inet6, port: String.to_integer(System.get_env("PORT") || "4000")],
