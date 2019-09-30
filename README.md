@@ -1,5 +1,10 @@
 # Parcelex
 
+```
+npm run deploy --prefix ./assets
+mix phx.digest
+```
+
 To start your Phoenix server:
 
   * Install dependencies with `mix deps.get`

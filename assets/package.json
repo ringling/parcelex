@@ -2,23 +2,23 @@
   "repository": {},
   "license": "MIT",
   "scripts": {
-    "deploy": "cp -R static/* ../priv/static/ && parcel build js/app.js --out-dir ../priv/static/assets --public-url /assets --no-cache",
-    "watch": "cp -R static/* ../priv/static/ && parcel watch js/app.js --out-dir ../priv/static/assets --public-url /assets"
+    "deploy": "cp -R static/* ../priv/static/ && parcel build js/app.js -d ../priv/static/assets --public-url /assets --no-cache",
+    "watch": "cp -R static/* ../priv/static/ && parcel watch js/app.js -d ../priv/static/assets --public-url /assets"
   },
   "dependencies": {
     "phoenix": "file:../deps/phoenix",
-    "phoenix_html": "file:../deps/phoenix_html"
+    "phoenix_html": "file:../deps/phoenix_html",
+    "vue": "^2.6.10",
+    "vue-hot-reload-api": "^2.3.4"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",
     "@babel/preset-env": "^7.0.0",
-    "babel-loader": "^8.0.0",
-    "css-loader": "^2.1.1",
+    "@vue/component-compiler-utils": "^3.0.0",
     "cssnano": "^4.1.10",
-    "mini-css-extract-plugin": "^0.4.0",
     "parcel": "^1.12.3",
     "parcel-plugin-stdin": "^0.1.1",
     "sass": "^1.22.12",
-    "sass-loader": "^8.0.0"
+    "vue-template-compiler": "^2.6.10"
   }
 }
