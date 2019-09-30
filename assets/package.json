@@ -2,8 +2,8 @@
   "repository": {},
   "license": "MIT",
   "scripts": {
-    "deploy": "cp -R static/* ../priv/static/ && parcel build js/app.js --out-dir ../priv/static/js --public-url /js --no-cache",
-    "watch": "cp -R static/* ../priv/static/ && parcel watch js/app.js --out-dir ../priv/static/js --public-url /js"
+    "deploy": "cp -R static/* ../priv/static/ && parcel build js/app.js --out-dir ../priv/static/assets --public-url /assets --no-cache",
+    "watch": "cp -R static/* ../priv/static/ && parcel watch js/app.js --out-dir ../priv/static/assets --public-url /assets"
   },
   "dependencies": {
     "phoenix": "file:../deps/phoenix",
@@ -16,6 +16,8 @@
     "css-loader": "^2.1.1",
     "mini-css-extract-plugin": "^0.4.0",
     "parcel": "^1.12.3",
-    "parcel-plugin-stdin": "^0.1.1"
+    "parcel-plugin-stdin": "^0.1.1",
+    "sass": "^1.22.12",
+    "sass-loader": "^8.0.0"
   }
 }
