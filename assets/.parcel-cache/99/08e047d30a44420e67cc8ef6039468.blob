@@ -1,0 +1,7 @@
+/* This file is for your main application css. */
+
+@import "./phoenix.scss";
+
+body {
+  background-color: #c0c0c0;
+}

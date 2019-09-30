@@ -3,9 +3,10 @@
   "license": "MIT",
   "scripts": {
     "deploy": "cp -R static/* ../priv/static/ && parcel build js/app.js --out-dir ../priv/static/js --public-url /js --no-cache",
-    "watch": "cp -R static/* ../priv/static/ && parcel watch js/app.js --out-dir ../priv/static/js --public-url /js"
+    "watch": "cp -R static/* ../priv/static/ && parcel watch js/app.js"
   },
   "dependencies": {
+    "core-js": "^2.6.9",
     "phoenix": "file:../deps/phoenix",
     "phoenix_html": "file:../deps/phoenix_html"
   },
@@ -15,7 +16,22 @@
     "babel-loader": "^8.0.0",
     "css-loader": "^2.1.1",
     "mini-css-extract-plugin": "^0.4.0",
-    "parcel": "^1.12.3",
-    "parcel-plugin-stdin": "^0.1.1"
+    "node-sass": "^4.12.0",
+    "parcel": "^2.0.0-alpha.1.1",
+    "parcel-plugin-stdin": "^0.1.1",
+    "parcel-plugin-bundle-manifest": "^0.2.0",
+    "sass": "^1.22.12"
+  },
+  "browser": "../priv/static",
+  "targets": {
+    "browser": {
+      "publicUrl": "./",
+      "engines": {
+        "browsers": [
+          "> 1%",
+          "not dead"
+        ]
+      }
+    }
   }
 }
