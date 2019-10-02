@@ -5,7 +5,10 @@
 </template>
 <script>
 export default {
-  props: ['header']
+  props: ['header'],
+  created: function () {
+    console.log('a is: ' + this.a)
+  }
 }
 </script>
 
