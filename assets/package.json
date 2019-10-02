@@ -2,6 +2,7 @@
   "repository": {},
   "license": "MIT",
   "scripts": {
+    "test": "jest",
     "deploy": "cp -R static/* ../priv/static/ && parcel build js/app.js -d ../priv/static/assets --public-url /assets --no-cache",
     "watch": "cp -R static/* ../priv/static/ && parcel watch js/app.js -d ../priv/static/assets --public-url /assets"
   },
@@ -13,12 +14,28 @@
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",
+    "babel-core": "7.0.0-bridge.0",
     "@babel/preset-env": "^7.0.0",
     "@vue/component-compiler-utils": "^3.0.0",
+    "@vue/test-utils": "^1.0.0-beta.29",
+    "babel-jest": "^24.9.0",
     "cssnano": "^4.1.10",
+    "jest": "^24.9.0",
     "parcel": "^1.12.3",
     "parcel-plugin-stdin": "^0.1.1",
     "sass": "^1.22.12",
+    "vue-jest": "^3.0.5",
     "vue-template-compiler": "^2.6.10"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "vue"
+    ],
+    "transform": {
+      "^.+\\.js$": "<rootDir>/node_modules/babel-jest",
+      ".*\\.(vue)$": "vue-jest"
+    }
   }
 }
